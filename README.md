@@ -100,17 +100,14 @@ A single Databricks Job with 4 sequential tasks, task dependencies, job-level pa
 chinook-pipeline/
 │
 ├── notebooks/
-│   ├── 00_environment_setup.py          # Creates schemas, Volume, metadata tables
-│   ├── 00b_connection_manager_setup.py  # Connection Manager guide
-│   ├── 01_extract_from_source.py        # Azure SQL → Raw Volume (Parquet)
-│   ├── 02_raw_to_bronze.py              # Raw Volume → Bronze Delta
-│   ├── 03_bronze_to_silver.py           # DQX validation + cleaning → Silver Delta
-│   └── 04_silver_to_gold.py            # Dimensional model + SCD2 → Gold Delta
-│
+│   ├── 0 environment_setup.py          # Creates schemas, Volume, metadata tables
+│   ├── 1 extract_from_source.py        # Azure SQL → Raw Volume (Parquet)
+│   ├── 2 raw_to_bronze.py              # Raw Volume → Bronze Delta
+│   ├── 3 bronze_to_silver.py           # DQX validation + cleaning → Silver Delta
+│   ├── 4 silver_to_gold.py             # Dimensional model + SCD2 → Gold Delta
+│   └── Job.yml                         # A job-driven pipeline for Databricks
 ├── sql/
-│   ├── 00_metadata_tables.sql           # Metadata + control table DDL
-│   ├── version2_azure_sql_updates.sql   # Version 2 UPDATE statements for SCD2 demo
-│   └── version2_scd2_verification.sql   # SCD2 verification queries
+│   └── metadata_tables.sql             # Metadata + control table DDL
 │
 └── README.md
 ```
