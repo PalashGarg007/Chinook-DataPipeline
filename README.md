@@ -107,7 +107,7 @@ chinook-pipeline/
 │   ├── 4 silver_to_gold.py             # Dimensional model + SCD2 → Gold Delta
 │   └── Job.yml                         # A job-driven pipeline for Databricks
 ├── sql/
-│   └── metadata_tables.sql             # Metadata + control table DDL
+│   └── Azure_Chinook_DataLoadScript.sql             # Metadata + control table DDL
 │
 └── README.md
 ```
